@@ -1,0 +1,17 @@
+# node
+node_modules
+
+# logs
+*.log
+
+# files and IDE
+.DS_STORE
+*~
+*.swp
+*.swo
+
+# project
+.cache
+.env
+package-lock.json
+public
