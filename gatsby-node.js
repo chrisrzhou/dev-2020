@@ -1,6 +1,6 @@
 const path = require('path');
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, loaders, stage }) => {
   // absolute imports alised to '~'
   actions.setWebpackConfig({
     resolve: {
@@ -10,4 +10,18 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       },
     },
   });
+
+  // https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /three.interaction/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
 };
