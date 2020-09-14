@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "dev-2020",
-  "description": "my developer experience leading up to 2020",
+  "description": "My developer journey leading up to 2020",
   "license": "MIT",
   "homepage": "https://github.com/chrisrzhou/dev-2020",
   "repository": "https://github.com/chrisrzhou/dev-2020",
@@ -11,7 +11,7 @@
     "bootstrap": "npm install",
     "build": "gatsby build",
     "clean": "rm -rf dist",
-    "docs": "gatsby develop",
+    "dev": "gatsby develop",
     "lint": "xo --fix; tsc"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "gatsby-plugin-theme-ui": "^0.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "remark-slug": "^6.0.0",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
@@ -54,6 +55,8 @@
     "prettier": true,
     "rules": {
       "capitalized-comments": "off",
+      "import/no-anonymous-default-export": "off",
+      "import/no-unassigned-import": "off",
       "padding-line-between-statements": "off",
       "react/function-component-definition": "off",
       "react/prop-types": "off",
