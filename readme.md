@@ -1,10 +1,4 @@
-# ⌨️ dev-2020
-
-https://dev-2020.chrisrzhou.io/
-
-My developer journey leading up to 2020.
-
-A resume of sorts, but mostly a self-writing checkpoint.
+A resume of sorts, but mostly a writeup that will be committed as a checkpoint in my journey as a developer.
 
 ---
 
@@ -39,7 +33,7 @@ I believe that a progressively fair world can only be achieved if tooling, knowl
 ## Projects
 
 ### Active
-- [`unified-doc`][unified-doc]: unified document APIs.
+- [`unified-doc`][unified-doc]: A unified way to work with all kinds of documents.
 - [`tdast`][tdast]: abstract syntax tree spec and utilities for working with tabular data.
 - [`react-globe`][react-globe]: `react` + `three` globe component.
 - [`react-wordcloud`][react-wordcloud]: `react` + `d3` wordcloud component.

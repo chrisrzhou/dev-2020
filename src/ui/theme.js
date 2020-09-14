@@ -1,3 +1,6 @@
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/animations/scale.css';
+
 import '~/styles/global.css';
 
 const colors = {
@@ -82,6 +85,9 @@ const styles = {
         borderRadius: 'none',
         px: 0,
       },
+    },
+    h1: {
+      fontSize: 6,
     },
     'h1, h2, h3': {
       lineHeight: 'heading',

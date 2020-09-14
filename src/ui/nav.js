@@ -9,6 +9,7 @@ export default function Nav() {
       <Logo />
       <Flex flex="1 1 auto" justifyContent="space-between" space={3}>
         <Flex space={3}>
+          <Link to="/projects">Projects</Link>
           <Link to="/about">About</Link>
         </Flex>
         <Flex space={3}>

@@ -1,7 +1,84 @@
-import { Layout } from '~/ui';
+import Globe from 'react-globe';
+import Wordcloud from 'react-wordcloud';
+import { DocComponent } from 'unified-doc-react';
+
+import { Card, Flex, Layout, Text } from '~/ui';
+import {
+  csvContent,
+  htmlContent,
+  jsContent,
+  markdownContent,
+  markers,
+  words
+} from '~/data';
 
 export default function PageLayout({ children }) {
   return <Layout>{children}</Layout>
 }
 
-TODO
+# Hi, I'm Chris 👋
+
+I have spent the last few years at [Facebook](./about#data-ui-engineer-facebook) and recent startups building a variety of internal data visualization tools and UIs, and have learned a lot since my humble beginnings as a [business analyst](./about#business-intelligence-analyst-nrg-energy) learning and [hacking JS visualizations][gists] with no prior coding background.
+
+All this is possible because of open-source tools and open access to knowledge.  Recently, I have been [actively working](https://github.com/chrisrzhou) on a number of open source projects, simplifying the way we work with data, visualizations, content, and knowledge.
+
+<Flex justifyContent="space-between" my={4} sx={{ height: 400}}>
+  <Card sx={{ flex: '0 0 50%' }}>
+    <a href="https://react-globe.netlify.app/"><strong>react-globe</strong></a>
+    <Globe
+      markers={markers}
+      options={{
+        markerTooltipRenderer: marker => `${marker.id} (${marker.value})`,
+      }}
+    />
+  </Card>
+  <Card sx={{ flex: '0 0 50%' }}>
+    <a href="https://react-wordcloud.netlify.app/"><strong>react-wordcloud</strong></a>
+    <Wordcloud words={words} />
+  </Card>
+</Flex>
+
+I am extremely excited in the content/document/knowledge problem space and have been sinking many hours on recent projects in these areas.  I would love to advance [these projects](./projects) to the next phases *with you* 👊.
+
+<Card my={4}>
+  <a href="https://unified-doc.netlify.app/"><strong>unified-doc</strong></a>
+  <Flex alignItems="start" space={3}>
+    <DocComponent
+      options={{
+        content: htmlContent,
+        filename: 'doc.html',
+      }}
+    />
+    <DocComponent
+      options={{
+        content: markdownContent,
+        filename: 'doc.md',
+      }}
+    />
+    <DocComponent
+      options={{
+        content: csvContent,
+        filename: 'doc.csv',
+      }}
+    />
+  </Flex>
+</Card>
+
+I use any tools for the job and have worked with `r`, `py`, `sql` and various parts of the software stack (building REST/Graphql APIs, plumbing data pipelines), but `js` is my *JAM* to rapidly build cheap solutions consumable via UIs.
+
+Did I mention **cheap**?
+
+Yes, I did, and *cheap is good*.  I strongly believe all things become easier to do over time.  The cheaper we can build things to use/compose/refactor/deprecate, the more efficient the world operates in the long run.
+
+In the spirit of minimalism, this website is built cheapy with:
+- three Gatsby MDX [pages](https://github.com/chrisrzhou/dev-2020/tree/main/src/pages)
+- simple component APIs for demos of projects in [this page](https://github.com/chrisrzhou/dev-2020/blob/main/src/pages/index.mdx)
+- a micro [UI system](https://github.com/chrisrzhou/dev-2020/tree/main/src/ui) built with `theme-ui`.
+- minimal [dev dependencies](https://github.com/chrisrzhou/dev-2020/blob/main/package.json) for linting, formatting and typing.
+
+Please feel free to check out my [projects](./projects) and learn more [about](./about) me in this micro website!
+
+<!-- definitions -->
+[gists]: https://bl.ocks.org/chrisrzhou
+[jamstack]: https://jamstack.org
+[syntax-tree]: https://github.com/syntax-tree
